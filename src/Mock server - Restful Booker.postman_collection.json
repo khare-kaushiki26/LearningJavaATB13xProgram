@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "eb7b0a6f-0004-468c-b69b-f1d8c577b008",
+		"name": "Mock server - Restful Booker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47217503",
+		"_collection_link": "https://www.postman.com/kaushiki-khare-3333240/workspace/atb13x-kaushiki-khare/collection/47217503-eb7b0a6f-0004-468c-b69b-f1d8c577b008?action=share&source=collection_link&creator=47217503"
+	},
+	"item": [
+		{
+			"name": "1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://e530e746-6ebc-4356-b2f5-1d62205d307c.mock.pstmn.io/1",
+							"protocol": "https",
+							"host": [
+								"e530e746-6ebc-4356-b2f5-1d62205d307c",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"firstname\": \"Sally\",\n    \"lastname\": \"Brown\",\n    \"totalprice\": 111,\n    \"depositpaid\": true,\n    \"bookingdates\": {\n        \"checkin\": \"2013-02-23\",\n        \"checkout\": \"2014-10-23\"\n    },\n    \"additionalneeds\": \"Breakfast\"\n}"
+				}
+			]
+		},
+		{
+			"name": "booking create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\" : \"Jim\",\n    \"lastname\" : \"Brown\",\n    \"totalprice\" : 111,\n    \"depositpaid\" : true,\n    \"bookingdates\" : {\n        \"checkin\" : \"2018-01-01\",\n        \"checkout\" : \"2019-01-01\"\n    },\n    \"additionalneeds\" : \"Breakfast\"\n}'"
+				},
+				"url": {
+					"raw": "{{url}}/booking create",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"booking create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstname\" : \"Jim\",\n    \"lastname\" : \"Brown\",\n    \"totalprice\" : 111,\n    \"depositpaid\" : true,\n    \"bookingdates\" : {\n        \"checkin\" : \"2018-01-01\",\n        \"checkout\" : \"2019-01-01\"\n    },\n    \"additionalneeds\" : \"Breakfast\"\n}'"
+						},
+						"url": {
+							"raw": "https://e530e746-6ebc-4356-b2f5-1d62205d307c.mock.pstmn.io/booking create",
+							"protocol": "https",
+							"host": [
+								"e530e746-6ebc-4356-b2f5-1d62205d307c",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"booking create"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"bookingid\": 1,\n    \"booking\": {\n        \"firstname\": \"Jim\",\n        \"lastname\": \"Brown\",\n        \"totalprice\": 111,\n        \"depositpaid\": true,\n        \"bookingdates\": {\n            \"checkin\": \"2018-01-01\",\n            \"checkout\": \"2019-01-01\"\n        },\n        \"additionalneeds\": \"Breakfast\"\n    }\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://e530e746-6ebc-4356-b2f5-1d62205d307c.mock.pstmn.io"
+		}
+	]
+}
